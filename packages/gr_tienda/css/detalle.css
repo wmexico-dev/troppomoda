@@ -1,0 +1,24 @@
+.detalle p{margin-bottom:10px}
+.detalle .d-img{
+    border:1px solid #00BBB3;
+    padding:3px;
+    margin-bottom:20px;
+    text-align:center;
+}
+.detalle form.comprar p{
+	padding-left:20px;
+	margin-bottom:0;
+}
+.detalle form.comprar .precio{
+	font-size:18px;
+	font-weight:bold
+}
+.detalle form.comprar .promo{
+	font-size:18px;
+	font-weight:bold;
+}
+.detalle form.comprar .p-no{
+	font-weight:normal;
+	color:#EF746E;
+	text-decoration:line-through;
+}

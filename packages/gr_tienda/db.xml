@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="grTienda">
+		<field name="tID" type="I"><key /><unsigned /></field>
+		<field name="tTipo" type="I"></field>
+		<field name="tCategoria" type="I"><unsigned /></field>
+		<field name="tMarca" type="I"><unsigned /></field>
+		<field name="tImagen" type="I"><unsigned /></field>
+		<field name="tPromocion" type="I"><unsigned /></field>
+		<field name="tIdent" type="C" size="127"></field>
+		<field name="tNombre" type="C" size="127"></field>
+		<field name="tClaves" type="C" size="255"></field>
+		<field name="tModelo" type="C" size="127"></field>
+		<field name="tDescripcion" type="X2"></field>
+		<field name="tPrecio" type="N" size="10.2"></field>
+		<field name="tPrecios" type="X2"></field>
+		<field name="tImagenes" type="X2"></field>
+		<field name="tBusqueda" type="X2"></field>
+		<field name="tActualiz" type="I"></field>
+		<field name="tVipStatus" type="I"></field>
+		<field name="tVipDescuento" type="N" size="10.2"></field>
+	</table>
+	<table name="grTiendaCategorias">
+		<field name="cID" type="I"><key /><unsigned /></field>
+		<field name="cIndice" type="I"></field>
+		<field name="cTipo" type="I"></field>
+		<field name="cCategoria" type="I"><unsigned /></field>
+		<field name="cIdent" type="C" size="127"></field>
+		<field name="cNombre" type="C" size="127"></field>
+	</table>
+	<table name="grTiendaMarcas">
+		<field name="mID" type="I"><key /><unsigned /></field>
+		<field name="mIndice" type="I"></field>
+		<field name="mTipo" type="I"></field>
+		<field name="mImagen" type="I"><unsigned /></field>
+		<field name="mIdent" type="C" size="127"></field>
+		<field name="mNombre" type="C" size="127"></field>
+		<field name="mVipStatus" type="I"></field>
+		<field name="mVipDescuento" type="N" size="10.2"></field>
+	</table>
+	<table name="grTiendaPromociones">
+		<field name="pID" type="I"><key /><unsigned /></field>
+		<field name="pIndice" type="I"></field>
+		<field name="pTipo" type="I"></field>
+		<field name="pImagen" type="I"><unsigned /></field>
+		<field name="pColor" type="C" size="32"></field>
+		<field name="pIdent" type="C" size="127"></field>
+		<field name="pNombre" type="C" size="127"></field>
+		<field name="pVipStatus" type="I"></field>
+		<field name="pVipDescuento" type="N" size="10.2"></field>
+	</table>
+	<table name="grTiendaOrdenes">
+		<field name="oID" type="I"><key /><unsigned /></field>
+		<field name="oCliente" type="I"></field>
+		<field name="oEmail" type="C" size="128"></field>
+		<field name="oOrden" type="C" size="32"></field>
+		<field name="oTotal" type="N" size="10.2"></field>
+		<field name="oTipo" type="C" size="32"></field>
+		<field name="oStatus" type="C" size="32"></field>
+		<field name="oInfo" type="X2"></field>
+	</table>
+	<table name="grTiendaImagenes">
+		<field name="iID" type="I"><key /><unsigned /></field>
+		<field name="iIndice" type="I"></field>
+		<field name="iTipo" type="I"></field>
+		<field name="iTienda" type="I"><unsigned /></field>
+		<field name="iImagen" type="I"><unsigned /></field>
+		<field name="iAncho" type="I"></field>
+		<field name="iAltura" type="I"></field>
+		<field name="iNombre" type="C" size="127"></field>
+		<field name="iLink" type="C" size="255"></field>
+		<field name="iStyle" type="C" size="127"></field>
+		<field name="iNota" type="X2"></field>
+	</table>
+</schema>

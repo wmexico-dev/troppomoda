@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="grTextos">
+		<field name="dID" type="I"><key /><unsigned /></field>
+		<field name="dTipo" type="I"></field>
+		<field name="dIndice" type="I"></field>
+		<field name="dIdent" type="C" size="127"></field>
+		<field name="dTitulo" type="C" size="127"></field>
+		<field name="dImagen" type="I"></field>
+		<field name="dTexto" type="X2"></field>
+		<field name="dVideo" type="C" size="127"></field>
+	</table>
+	<table name="grTextosInformacion">
+		<field name="iID" type="I"><key /><unsigned /></field>
+		<field name="dID" type="I"><unsigned /></field>
+		<field name="iTipo" type="I"></field>
+		<field name="iIndice" type="I"></field>
+		<field name="iTitulo" type="C" size="127"></field>
+		<field name="iInfo" type="X2"></field>
+	</table>	
+</schema>

@@ -1,0 +1,19 @@
+#compras table{margin-top:25px}
+#compras table td{
+	font-size:17px;
+	line-height:34px;
+}
+#compras thead td{font-size:12px;color:#555}
+#compras .c-cant{text-align:center}
+#compras .c-mas a{color:#007579}
+#compras .c-menos{padding-left:3px}
+#compras .c-menos a{color:#007579}
+#compras .c-img div{margin-left:40px;width:90px;height:34px}
+#compras .c-nombre div{padding-left:25px;overflow:hidden;}
+#compras .c-img{padding:0}
+#compras .c-precio div{text-align:right;width:100px}
+#compras .c-subtotal div{text-align:right;width:140px;padding-right:30px}
+#compras .c-elim a{color:#7F0000}
+#compras .c-total{margin:18px 70px 0 0;text-align:right;font-size:22px}
+#compras .c-pagar{text-align:center;margin-top:32px}
+#compras .c-pagar a{font-size:22px}

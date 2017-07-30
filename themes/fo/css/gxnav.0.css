@@ -1,0 +1,181 @@
+.gxnav {
+	-webkit-transition:none;
+	-moz-transition:none;
+	-ms-transition:none;
+	transition:none;
+	-webkit-transform-style:preserve-3d;
+	list-style:none;
+	margin:0;
+	padding:0;
+	max-height:none;
+	height:auto;
+	display:none;
+	position:relative;
+	z-index:31;
+}
+.gxnav.opacity {opacity:0}
+.gxnav.gxnav-show {
+	max-height:2000px;
+	opacity:1;
+	-webkit-transition:all .5s ease-in-out;
+	-moz-transition:all .5s ease-in-out;
+	-ms-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out;
+	display:block;
+}
+.gxnav li {position:relative}
+.gxnav li a {
+	display:block;
+}
+.gxnav li ul {
+	margin:0;
+	display:none;
+	list-style:none;
+	max-height:none;
+	height:auto;
+}
+.gxnav .gxnav-touch {
+	position:absolute;
+	z-index:33;
+	top:0;
+	right:0;
+	display:inline-block;
+	text-align:center;
+}
+.gxnav .gxnav-touch:hover {
+	cursor:pointer;
+}
+.gxnav-menu {
+	position:relative;
+	display:block;
+	cursor:pointer;
+}
+.gxnav-menu .gxnav-touch {
+	position:absolute;
+	z-index:33;
+	top:0;
+	right:0;
+	display:inline-block;
+	text-align:center;
+}
+.gxnav-menu .gxnav-touch:hover {
+	cursor:pointer;
+}
+@media all and (min-width:800px) {
+	.gxnav {
+		overflow:visible;
+		display:block;
+	}
+	.gxnav.opacity {
+		opacity:1;
+	}
+	.gxnav>li {
+		display:inline-block;
+	}
+	.gxnav li > ul {
+		position:absolute;
+		top:auto;
+		left:0;
+		z-index:32;
+		overflow:visible !important;
+	}
+	.gxnav li ul li > ul {
+		margin-left:100%;
+		top:0;
+		overflow:visible !important;
+	}
+	.gxnav li ul li a {
+		border-bottom:none;
+	}
+	.gxnav li ul.open {
+		display:block;
+		opacity:1;
+		visibility:visible;
+	}
+	.gxnav li ul.open li {
+		overflow:visible;
+	}
+	.gxnav li ul.open ul.open {
+		margin-left:100%;
+		top:0;
+	}
+	.gxnav-menu {
+		display:none;
+	}
+}
+
+.oldie body.one-page {
+	padding-top:70px;
+}
+.oldie .gxnav {
+	overflow:visible;
+}
+.oldie .gxnav.one-page {
+	top:0;
+	right:auto;
+	max-width:1080px;
+}
+.oldie .gxnav li {
+	position:relative;
+	list-style:none;
+	float:left;
+	display:block;
+	background-color:#a6a6a2;
+	width:20%;
+	min-height:50px;
+	overflow:visible;
+}
+.oldie .gxnav li:hover > ul {
+	display:block;
+	width:100%;
+	overflow:visible;
+}
+.oldie .gxnav li:hover > ul li {
+	width:100%;
+	float:none;
+}
+.oldie .gxnav li a {
+	border-left:1px solid #acaca1;
+	border-bottom:none;
+	overflow:visible;
+}
+.oldie .gxnav li > ul {
+	background:#acaca1;
+	position:absolute;
+	top:auto;
+	left:0;
+	display:none;
+	z-index:1;
+	overflow:visible;
+}
+.oldie .gxnav li ul li ul {
+	top:0;
+}
+.oldie .gxnav li ul li a {
+	border-bottom:none;
+}
+.oldie .gxnav li ul.open {
+	display:block;
+	width:100%;
+	overflow:visible;
+}
+.oldie .gxnav li ul.open li {
+	width:100%;
+}
+.oldie .gxnav li ul.open ul.open {
+	margin-left:100%;
+	top:0;
+	display:block;
+	width:100%;
+	overflow:visible;
+}
+.oldie .gxnav ul li:hover ul {
+	margin-left:100%;
+	top:0;
+}
+.oldie .gxnav-menu {
+	display:none;
+}
+.oldie.ie7 .gxnav li {
+	width:19.9%;
+}

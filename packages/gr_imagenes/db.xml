@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="grImagenesCategorias">
+		<field name="cID" type="I"><key /><unsigned /></field>
+		<field name="cIndice" type="I"></field>
+		<field name="cIdent" type="C" size="127"></field>
+		<field name="cNombre" type="C" size="127"></field>
+		<field name="cMaxAncho" type="I"></field>
+		<field name="cMaxAltura" type="I"></field>
+		<field name="cStyle" type="C" size="127"></field>
+		<field name="cNota" type="X2"></field>
+	</table>
+	<table name="grImagenes">
+		<field name="iID" type="I"><key /><unsigned /></field>
+		<field name="cID" type="I"><unsigned /></field>
+		<field name="iIndice" type="I"></field>
+		<field name="iTipo" type="I"></field>
+		<field name="iNombre" type="C" size="127"></field>
+		<field name="iImagen" type="I"></field>
+		<field name="iAncho" type="I"></field>
+		<field name="iAltura" type="I"></field>
+		<field name="iLink" type="C" size="255"></field>
+		<field name="iStyle" type="C" size="127"></field>
+		<field name="iNota" type="X2"></field>
+	</table>
+</schema>

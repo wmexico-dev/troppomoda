@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="grPago">
+		<field name="pID" type="I8"><key /><unsigned /></field>
+		<field name="pCliente" type="I"></field>
+		<field name="pEmail" type="C" size="128"></field>
+		<field name="pOrden" type="C" size="32"></field>
+		<field name="pTotal" type="N" size="10.2"></field>
+		<field name="pTipo" type="C" size="32"></field>
+		<field name="pStatus" type="C" size="32"></field>
+		<field name="pInfo" type="X2"></field>
+	</table>
+	<table name="grPagoTranx">
+		<field name="tID" type="I8"><key /><unsigned /></field>	
+		<field name="tOrden" type="C" size="32"></field>
+		<field name="tTotal" type="N" size="10.2"></field>
+		<field name="tTipo" type="C" size="32"></field>
+		<field name="tStatus" type="C" size="32"></field>
+		<field name="tInfo" type="X2"></field>
+	</table>
+</schema>

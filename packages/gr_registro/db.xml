@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="grRegistro">
+		<field name="rID" type="I"><key /><unsigned /></field>
+		<field name="rEmail" type="C" size="64"></field>
+		<field name="rClave" type="C" size="127"></field>
+		<field name="rNombre" type="C" size="64"></field>
+		<field name="rTipo" type="I"></field>
+		<field name="rImagen" type="I"></field>
+		<field name="rLogin" type="I"></field>
+		<field name="rInfo" type="X2"></field>
+		<field name="rVipInfo" type="X2"></field>
+		<field name="rVipFin" type="I"></field>
+		<field name="rStatus" type="I"></field>
+		<field name="rDat00" type="N" size="10.2"></field>
+		<field name="rPwdTime" type="I"></field>
+		<field name="rPwdData" type="C" size="127"></field>
+	</table>
+	<table name="grRegistroCompras">
+		<field name="cID" type="I"><key /><unsigned /></field>
+		<field name="rID" type="I"><unsigned /></field>
+		<field name="cCompras" type="X2"></field>
+	</table>
+	
+	<table name="grRegistroDescMarca">
+		<field name="mID" type="I"><key /><unsigned /></field>
+		<field name="tMarca" type="I"><unsigned /></field>
+		<field name="rTipo" type="I"></field>
+		<field name="mDescuento" type="N" size="10.2"></field>
+	</table>
+	<table name="grRegistroDescArticulo">
+		<field name="aID" type="I"><key /><unsigned /></field>
+		<field name="tID" type="I"><unsigned /></field>
+		<field name="rTipo" type="I"></field>
+		<field name="aDescuento" type="N" size="10.2"></field>
+	</table>
+	<table name="grRegistroDescPromocion">
+		<field name="pID" type="I"><key /><unsigned /></field>
+		<field name="tPromocion" type="I"><unsigned /></field>
+		<field name="rTipo" type="I"></field>
+		<field name="pDescuento" type="N" size="10.2"></field>
+	</table>
+</schema>
