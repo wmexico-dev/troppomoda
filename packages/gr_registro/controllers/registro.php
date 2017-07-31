@@ -1,11 +1,11 @@
 <?php   defined("C5_EXECUTE") or die(_("Access Denied."));
 
 Class RegistroController Extends Controller {
-    
+
     const aDir = "/registro/";
-    
+
     private function stxt($s) { return "'".mysql_real_escape_string($s)."'"; }
-    
+
     public function on_start() {
         $html= Loader::helper('html');
         $db = Loader::db();
@@ -14,13 +14,13 @@ Class RegistroController Extends Controller {
         $this->set('xdat',null);
         $this->set('xcmd',null);
     }
-    
+
     public function salir() {
         Loader::model('grRegistro','gr_registro');
         grRegistro::salir();
         $this->redirect('/');
     }
-    
+
     public function entrar() {
         if(empty($_SERVER['HTTP_REFERER'])) $this->redirect('/');
         $ref=parse_url($_SERVER['HTTP_REFERER']);
@@ -42,9 +42,13 @@ Class RegistroController Extends Controller {
                 if($clave== md5('Grx-8963')) $xupdclave=true;
             }
             if(!$xupdclave) if($clave!=$R['rClave']) $this->redirect(self::aDir .'incorrecto');
-            $sql= 'UPDATE grRegistro SET rLogin='.time();
+            $rLogin= time();
+            $sql= 'UPDATE grRegistro SET rLogin='.$rLogin;
             if($xupdclave) $sql.= ',rClave='.self::stxt($clave);
             $sql.= ' WHERE rID='.$R['rID'];
+            $rq= $db->query($sql);
+            $lID= '0'. $rLogin . chr(mt_rand(65,90)) . chr(mt_rand(65,90)) . chr(mt_rand(65,90));
+            $sql= 'INSERT INTO grRegistroLogin VALUES('.$lID.','.$R['rID'].','.$rLogin.')';
             $rq= $db->query($sql);
             $_SESSION['grRegistro']['email']= $R['rEmail'];
             $_SESSION['grRegistro']['tipo']= $R['rTipo'];
@@ -111,7 +115,7 @@ Class RegistroController Extends Controller {
             $this->set('xdat',$xdat);
         }
     }
-    
+
     public function olvidoEnviado() { }
 
     public function olvidoConfirmar($id=null,$dat=null,$chk=null) {
@@ -132,7 +136,7 @@ Class RegistroController Extends Controller {
             $this->redirect(self::aDir .'olvidoConfirmado?m=ok');
         } else $this->redirect('/?e=registro_olvidoConfirmar.');
     }
-    
+
     public function olvidoConfirmado() { }
-    
+
 }

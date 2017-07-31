@@ -16,12 +16,17 @@
 		<field name="rPwdTime" type="I"></field>
 		<field name="rPwdData" type="C" size="127"></field>
 	</table>
+	<table name="grRegistroLogin">
+		<field name="lID" type="I8"><key /><unsigned /></field>
+		<field name="rID" type="I"><unsigned /></field>
+		<field name="rLogin" type="I"></field>
+	</table>
 	<table name="grRegistroCompras">
 		<field name="cID" type="I"><key /><unsigned /></field>
 		<field name="rID" type="I"><unsigned /></field>
 		<field name="cCompras" type="X2"></field>
 	</table>
-	
+
 	<table name="grRegistroDescMarca">
 		<field name="mID" type="I"><key /><unsigned /></field>
 		<field name="tMarca" type="I"><unsigned /></field>
